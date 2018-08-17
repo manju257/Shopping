@@ -1,0 +1,38 @@
+
+    <div class="signin-content">
+        <mat-card>
+          <mat-card-content>
+            <form  (ngSubmit)="onSubmit(user)" #signUpForm="ngForm" >
+              <p> SignUp to continue</p>
+
+              <mat-form-field class="full-width-input">
+                <input matInput placeholder="Email" name="Email"  #Email="ngModel"  [(ngModel)]="user.email"   required>
+                <mat-error *ngIf="isFieldInvalid('userName')">
+                  Please fill  your Email Address
+                </mat-error>
+              </mat-form-field>
+
+              <!-- <mat-form-field class="full-width-input">
+                <input matInput type="password" placeholder="Password" name="Password" #Password="ngModel" [(ngModel)]="user.password"  required>
+                <mat-error *ngIf="isFieldInvalid('userName')">
+                  Please fill your password
+                </mat-error>
+              </mat-form-field> -->
+             
+
+              <mat-form-field class="full-width-input">
+                    <input matInput type="Phone number" placeholder="Phone number" name="PhNumber" #PhNumber="ngModel" [(ngModel)]="user.phoneNumber" required>
+                    <mat-error *ngIf="isFieldInvalid('userName')">
+                      Please fill your Phone.Number
+                    </mat-error>
+              </mat-form-field> <br/>
+
+                 
+              <button mat-raised-button color="primary">Sign Up</button> 
+          
+            </form>
+          </mat-card-content>
+         
+        </mat-card>
+        
+      </div>

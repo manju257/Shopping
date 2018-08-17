@@ -1,0 +1,55 @@
+<h2 mat-dialog-title>Add category</h2>
+
+<!-- <mat-dialog-content>
+    <input matInput type="text" placeholder="New Category" name="txtcategory" #txtcategory="ngModel" [(ngModel)]="user.phoneNumber">
+
+</mat-dialog-content> -->
+
+ 
+        <!-- <mat-radio-group>
+            <mat-radio-button value="1" >Add</mat-radio-button>
+            <mat-radio-button value="2">Edit</mat-radio-button>
+            <mat-radio-button value="3">Delete</mat-radio-button>
+          </mat-radio-group> -->
+
+        <mat-radio-group >
+                <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+                  {{season}}
+                </mat-radio-button>
+        </mat-radio-group>
+
+     
+<!-- <mat-form-field>
+    <mat-select placeholder="Meals type" (selectionChange)="ddlCategoryChange($event.value)" >
+        <mat-option *ngFor="let item of data" [value]="item.categoryId">
+          {{item.categoryName}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field> -->
+
+
+
+    <div class="example-container">
+        <mat-form-field>
+          <input matInput [(ngModel)]="name" placeholder="Product Name" >
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Product Price">
+          </mat-form-field>
+        <mat-form-field>
+          <textarea matInput placeholder="Product Description" ></textarea>
+        </mat-form-field>
+      
+        <mat-form-field>
+            <textarea matInput placeholder="Product Description"></textarea>
+          </mat-form-field>
+
+
+      </div>
+
+  
+<mat-dialog-actions>
+<button mat-button   >Cancel</button>
+<button mat-button (click)="Save()"  >Save</button>
+
+</mat-dialog-actions>

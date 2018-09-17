@@ -1,6 +1,6 @@
 
 export class Products {
-   // SubCategoryId: number;
+    SubCategoryId: number;
     ProductID: number;
     ProductName: string;
     ProductPrice: number;
@@ -13,6 +13,7 @@ export class Products {
    ProductThumb: string;
  ProductVendor: string;
    // ProductInstock: string;
+   Flag :number;
 
 
 }

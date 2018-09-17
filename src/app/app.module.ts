@@ -7,10 +7,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSortModule,MatCheckboxModule,MatSelectModule,MatInputModule,
    MatDialogModule,MatRadioModule,MatPaginatorModule,MatTableModule} from '@angular/material';
 import { SlimLoadingBarService } from 'ng2-slim-loading-bar';
-
 import { ToasterService } from 'angular2-toaster/angular2-toaster';
 import { NgxPaginationModule } from 'ngx-pagination';
-
 import { HttpModule } from '@angular/http';
 
 
@@ -23,15 +21,16 @@ import { HttpModule } from '@angular/http';
 import {RouterModule,Routes} from "@angular/router";
 import {FormsModule ,ReactiveFormsModule} from "@angular/forms";
 import { AppComponent } from './app.component';
-import { LoginComponent } from '../app/authentication/Login/login.component';
-import { MainComponent } from './main/main.component';
-import { MaterialModule } from './imports/material.module';
-import { RegistrationComponent } from './authentication/registration/registration.component';
-
-import { AuthenticationService } from './Services/authentication.service';
-import { HomeComponent } from './Home/home/home.component';
-import { HomeService } from './Services/home.service';
-import { DialogContentExampleDialogComponent } from './dialog-content-example-dialog/dialog-content-example-dialog.component';
+import { LoginComponent } from './modules/authentication/Login/login.component';
+import { MainComponent } from './modules/main/main.component';
+import { RegistrationComponent } from './modules/authentication/registration/registration.component';
+import { HomeComponent } from './modules/Home/home/home.component';
+import { ProductsComponent } from './modules/products/products.component';
+import { RegionalProductsComponent } from './modules/regional-products/regional-products.component';
+import { DialogContentExampleDialogComponent } from './modules/dialog-content-example-dialog/dialog-content-example-dialog.component';
+import { MaterialModule } from './shared/imports/material.module';
+import { AuthenticationService } from './core/Services/authentication.service';
+import { HomeService } from './core/Services/home.service';
 
 
 const appRoutes : Routes =[
@@ -40,9 +39,10 @@ const appRoutes : Routes =[
   {path : 'Main' , component: MainComponent },
   {path : 'signUp' , component: RegistrationComponent},
   {path : 'Home' , component: HomeComponent},
+  {path : 'Products' , component: ProductsComponent},
+  {path : 'RegionalProducts' , component: RegionalProductsComponent},
   {path : '' , redirectTo: '/Login', pathMatch: 'full'}
 ];
-
 
 
 @NgModule({
@@ -52,7 +52,9 @@ const appRoutes : Routes =[
     MainComponent,
     RegistrationComponent,
     HomeComponent,
-    DialogContentExampleDialogComponent
+    DialogContentExampleDialogComponent,
+    ProductsComponent,
+    RegionalProductsComponent
   ],
   imports: [
     HttpModule,

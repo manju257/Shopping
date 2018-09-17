@@ -31,19 +31,22 @@
 
     <div class="example-container">
         <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="Product Name" >
+          <input matInput [(ngModel)]="objproduct.ProductName" placeholder="Product Name" >
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Product Price">
+            <input matInput [(ngModel)]="objproduct.ProductPrice" placeholder="Product Price">
           </mat-form-field>
         <mat-form-field>
-          <textarea matInput placeholder="Product Description" ></textarea>
+          <textarea matInput [(ngModel)]="objproduct.ProductShortDesc" placeholder="Product Description" ></textarea>
         </mat-form-field>
       
-        <mat-form-field>
-            <textarea matInput placeholder="Product Description"></textarea>
-          </mat-form-field>
+        <!-- <mat-form-field>
+            <textarea matInput [(ngModel)]="product." placeholder="Product Description"></textarea>
+          </mat-form-field> -->
 
+        <mat-form-field>
+            <textarea matInput [(ngModel)]="objproduct.ProductLongDesc" placeholder="Product Description"></textarea>
+          </mat-form-field>
 
       </div>
 

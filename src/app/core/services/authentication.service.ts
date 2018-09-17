@@ -4,10 +4,10 @@ import "rxjs/add/operator/map";
 import 'rxjs/add/operator/do'; // debug
 import { Observable } from "rxjs/Observable";
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import {Configuration} from '../app.constants';
+import { User } from "src/app/shared/model/user.model";
+//import {Configuration} from '../app.constants';
 
 
-import { User } from '../model/user.model';
 
 @Injectable()
 export class AuthenticationService {

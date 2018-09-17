@@ -1,14 +1,14 @@
 import { Component, OnInit ,ViewChild} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import { FormGroup, FormBuilder, Validators ,NgForm,FormsModule } from '@angular/forms';
-import { User } from '../../model/user.model';
+
 import { SlimLoadingBarService } from 'ng2-slim-loading-bar';
 
 import { ToasterService } from 'angular2-toaster/angular2-toaster';
 import { HttpClientModule } from '@angular/common/http';
- import { HttpModule } from '@angular/http';
- import { AuthenticationService } from '../../Services/authentication.service';
-
+import { HttpModule } from '@angular/http';
+import { User } from 'src/app/shared/model/user.model';
+import { AuthenticationService } from 'src/app/core/Services/authentication.service';
 
 
 

@@ -1,7 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA ,MatRadioButton} from '@angular/material';
-import { DialogData } from '../Home/home/home.component';
-import { Category } from '../model/Category.model';
+ import { DialogData } from '../products/products.component';
+import { Products } from 'src/app/shared/model/product.model';
+
 
 @Component({
   selector: 'app-dialog-content-example-dialog',
@@ -9,14 +10,13 @@ import { Category } from '../model/Category.model';
   styleUrls: ['./dialog-content-example-dialog.component.css']
 })
 export class DialogContentExampleDialogComponent implements OnInit {
-
-
+   //objproduct : Products;
+   objproduct  = new Products(); 
+ 
 
 
   constructor( public dialogRef: MatDialogRef<DialogContentExampleDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: {objCategory: DialogData }) {
-
-
 
     }
 
@@ -24,12 +24,19 @@ export class DialogContentExampleDialogComponent implements OnInit {
 
   ngOnInit() {
 
- 
+    
   }
 
   Save()
   {
-         this.dialogRef.close('manju');
+    
+    
+
+
+         this.dialogRef.close(this.objproduct);
+        
+
+
 
   }
     onNoClick(): void {
